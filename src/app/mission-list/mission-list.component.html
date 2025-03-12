@@ -1,0 +1,27 @@
+<div class="mission-list-container">
+  <h2 class="title">Missions Disponibles</h2>
+  
+  <!-- Conteneur centré pour la barre de recherche intégrée -->
+  <div class="search-container">
+    <!-- Sélecteur intégré dans le groupe de recherche -->
+    <div class="input-group mb-2">
+      <select class="form-select search-select" [(ngModel)]="selectedField" (change)="applyFilter()">
+        <option value="title">Nom</option>
+        <option value="location">Lieu</option>
+      </select>
+      <input type="text" class="form-control search-input" placeholder="Rechercher..." [(ngModel)]="searchTerm">
+      <button class="btn btn-outline-secondary search-btn" type="button" (click)="clearSearch()">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </div>
+  
+  <!-- Affichage des missions filtrées -->
+  <div class="mission-cards">
+    <div class="mission-card" *ngFor="let mission of filteredMissions">
+      <h3>{{ mission.title }}</h3>
+      <p>{{ mission.description | slice:0:100 }}...</p>
+      <a [routerLink]="['/mission', mission.id]" class="btn btn-primary">Voir plus</a>
+    </div>
+  </div>
+</div>

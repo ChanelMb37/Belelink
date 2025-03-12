@@ -1,0 +1,76 @@
+.mission-list-container {
+  padding: 20px;
+  height: 500px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Conteneur centré pour la barre de recherche avec largeur réduite */
+.search-container {
+  max-width: 400px;
+  margin: 0 auto 20px auto;
+}
+
+/* Styles pour l'input group de recherche */
+.input-group {
+  width: 100%;
+}
+
+/* Réduction de la taille des éléments de recherche */
+.search-select {
+  max-width: 120px;
+}
+
+.search-input {
+  max-width: 180px;
+}
+
+.search-btn {
+  max-width: 50px;
+}
+
+/* Optionnel : Ajout d'un peu d'espacement interne et de bordures arrondies */
+.search-select,
+.search-input,
+.search-btn {
+  border-radius: 0;
+}
+
+.search-select {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.search-btn {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* Affichage des cartes de mission */
+.mission-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mission-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.mission-card:hover {
+  transform: translateY(-5px);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+}

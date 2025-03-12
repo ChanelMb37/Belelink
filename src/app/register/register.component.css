@@ -1,0 +1,60 @@
+/* Conteneur principal */
+.register-container {
+  max-width: 400px;
+  margin: 100px auto; /* Marge supérieure et inférieure pour l'espacement */
+  padding: 40px; /* Diminution du padding intérieur pour ajouter plus d'espace */
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-top: 100px; /* Espacement supplémentaire avec le header */
+  margin-bottom: 50px; /* Espacement avec le footer */
+}
+
+/* Champs de saisie */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Bouton principal */
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-container .input-field {
+  flex: 1;
+  padding-right: 30px; /* Pour éviter que l'icône recouvre le texte */
+}
+
+.password-container i {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}

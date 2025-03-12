@@ -1,0 +1,88 @@
+/* ✅ STYLE GÉNÉRAL DE LA NAVBAR */
+.navbar {
+  background: linear-gradient(to right, #007bff, #0056b3); /* Dégradé bleu élégant */
+  padding: 12px 20px; /* Ajout d'un peu d'espace */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* ✅ LOGO (MARQUE) AMÉLIORÉ */
+.navbar-brand {
+  font-size: 1.8rem; /* Plus grand */
+  font-weight: bold; /* Texte en gras */
+  color: white !important; /* Blanc pour contraster avec le fond */
+  text-transform: uppercase; /* Mettre en majuscules */
+  letter-spacing: 1px; /* Espacement des lettres */
+  transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+/* 🌟 Effet au survol */
+.navbar-brand:hover {
+  transform: scale(1.1); /* Effet zoom léger */
+  text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.6); /* Brillance subtile */
+}
+
+/* ✅ STYLE DES LIENS DE NAVIGATION */
+.nav-link {
+  font-size: 1.1rem; /* Légèrement plus grand */
+  color: white !important; /* Texte blanc */
+  font-weight: 500; /* Police semi-gras */
+  position: relative; /* Positionnement pour effet */
+  padding: 8px 16px; /* Espacement autour du lien */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* 🌟 Effet d'animation au survol */
+.nav-link:hover {
+  color: #ffdd57 !important; /* Couleur jaune dorée */
+  transform: translateY(-2px); /* Effet de léger soulèvement */
+}
+
+/* 🌟 Ajout d'un effet de soulignement dynamique */
+.nav-link::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #ffdd57; /* Soulignement doré */
+  transition: width 0.3s ease-in-out;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 70%; /* Soulignement animé */
+}
+
+/* ✅ BOUTON DE CONNEXION */
+.btn {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px; /* Coins arrondis */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* 🌟 Effet au survol du bouton */
+.btn:hover {
+  background-color: #ffdd57; /* Fond doré */
+  color: #333 !important; /* Texte foncé */
+  transform: scale(1.05); /* Effet de zoom */
+}
+
+/* ✅ NAVBAR RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center; /* Centrage des liens */
+  }
+
+  .navbar-toggler {
+    border: 2px solid white; /* Bordure blanche pour la visibilité */
+  }
+
+  .navbar-toggler-icon {
+    background-color: white; /* Couleur blanche */
+    border-radius: 4px;
+  }
+}

@@ -1,0 +1,65 @@
+<!-- 🎯 Bannière d'accueil -->
+<!-- 🎯 Bannière d'accueil -->
+<header class="hero-section text-center text-white">
+  <div class="container">
+    <h1 class="hero-title">Engagez-vous pour une cause qui vous tient à cœur</h1>
+    <p class="hero-subtitle">Rejoignez notre plateforme et trouvez des missions de bénévolat adaptées à votre passion.</p>
+
+    <!-- Bouton "Rejoignez-nous" visible seulement si l'utilisateur N'EST PAS connecté -->
+    <a *ngIf="!isAuthenticated && !loading" href="/register" class="btn btn-primary btn-lg">
+      Rejoignez Nous maintenant
+    </a>
+    
+      
+  </div>
+</header>
+
+
+<!-- 🎯 Section des fonctionnalités -->
+<section class="features-section text-center py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let feature of features">
+        <div class="feature-card p-4">
+          <i class="{{feature.icon}} feature-icon"></i>
+          <h5 class="mt-3">{{ feature.title }}</h5>
+          <p>{{ feature.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🎯 Section publicitaire animée -->
+<section class="promo-section text-center py-5">
+  <div class="container">
+    <h2 class="section-title">Pourquoi choisir notre plateforme ?</h2>
+    <p class="section-subtitle">Découvrez nos avantages en un coup d'œil</p>
+    
+    <div class="row">
+      <div class="col-md-4">
+        <div class="promo-card" data-aos="fade-up">
+          <img src="assets/images/image2.png" alt="Communauté" class="promo-image">
+          <h5 class="mt-3">Une grande communauté</h5>
+          <p>Rejoignez des milliers de bénévoles engagés.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="promo-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/images/istockphoto-184882558-1024x1024.jpg" alt="Missions variées" class="promo-image">
+          <h5 class="mt-3">Des missions variées</h5>
+          <p>Trouvez des opportunités adaptées à vos compétences.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="promo-card" data-aos="fade-up" data-aos-delay="400">
+          <img src="/assets/images/business-5000788_960_720.png" alt="Sécurité" class="promo-image">
+          <h5 class="mt-3">Sécurisé & Accessible</h5>
+          <p>Une plateforme intuitive et fiable.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

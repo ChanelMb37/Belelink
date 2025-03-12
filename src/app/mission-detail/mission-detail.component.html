@@ -1,0 +1,15 @@
+<div class="mission-detail-container" *ngIf="mission">
+  <h2 class="mission-title">{{ mission.title }}</h2>
+  <p class="mission-description">{{ mission.description }}</p>
+  <p class="mission-date"><strong>Date:</strong> {{ mission.date | date:'mediumDate' }}</p>
+  <p class="mission-location" *ngIf="mission.location"><strong>Lieu:</strong> {{ mission.location }}</p>
+
+  <!-- Boutons pour l'administrateur -->
+  <div *ngIf="isAdmin">
+    <button class="btn btn-primary" (click)="editMission()">Modifier</button>
+    <button class="btn btn-danger" (click)="deleteMission()">Supprimer</button>
+  </div>
+
+  <!-- Bouton "Postuler" pour le bénévole -->
+  <button class="btn btn-success" (click)="apply()">Postuler</button>
+</div>

@@ -1,0 +1,46 @@
+<div class="dashboard-container">
+  <!-- ✅ Barre de navigation interne au Dashboard -->
+  <nav class="dashboard-nav">
+    <ul>
+      <li><a href="#" (click)="navigateTo('users')">👤 Utilisateurs</a></li>
+      <li><a href="#" (click)="navigateTo('missions')">📋 Missions</a></li>
+      <li><a href="#" (click)="navigateTo('applications')">📨 Candidatures</a></li>
+    </ul>
+  </nav>
+
+  <!-- ✅ Titre principal -->
+  <h2 class="dashboard-title">Tableau de Bord Administrateur</h2>
+
+  <!-- ✅ Cartes Statistiques -->
+  <div class="stats-cards">
+    <div class="card stat-card">
+      <h3>👥 Total des Utilisateurs</h3>
+      <p>{{ totalUsers }}</p>
+    </div>
+    <div class="card stat-card">
+      <h3>📌 Total des Missions</h3>
+      <p>{{ totalMissions }}</p>
+    </div>
+    <div class="card stat-card">
+      <h3>📩 Total des Candidatures</h3>
+      <p>{{ totalApplications }}</p>
+    </div>
+  </div>
+
+  <!-- ✅ Graphique des missions -->
+  <div class="chart-container">
+    <h3>📊 Statistiques des Missions</h3>
+    <canvas id="missionChart"></canvas>
+  </div>
+
+  <!-- ✅ Liste des missions actives -->
+  <!-- <div class="missions-list">
+    <h3>📅 Missions Actives</h3>
+    <ul>
+      <li *ngFor="let mission of missions$ | async">
+        <strong>{{ mission.title }}</strong> – {{ mission.description | slice:0:50 }}...
+        <span class="mission-date">📅 {{ mission.date | date:'mediumDate' }}</span>
+      </li>
+    </ul>
+  </div> -->
+</div>

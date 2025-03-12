@@ -1,0 +1,22 @@
+<!-- Pied de page principal avec fond clair et texte centré -->
+<footer class="footer bg-light text-center py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <!-- Liste inline des liens du footer -->
+        <ul class="list-inline">
+          <!-- Itération sur le tableau footerLinks pour générer chaque lien -->
+          <li class="list-inline-item" *ngFor="let link of footerLinks">
+            <a [href]="link.link" class="footer-link">
+              <!-- Affichage de l'icône associée avec une marge à droite -->
+              <i class="{{link.icon}} me-1"></i>
+              {{ link.label }} <!-- Affichage du label du lien -->
+            </a>
+          </li>
+        </ul>
+        <!-- Texte de copyright -->
+        <p class="small mb-0">&copy; 2025 Mon Application de Bénévolat</p>
+      </div>
+    </div>
+  </div>
+</footer>

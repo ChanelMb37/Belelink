@@ -1,0 +1,26 @@
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.form-control {
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  font-size: 1.1rem;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin: 10px;
+  }
+}

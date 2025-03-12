@@ -1,0 +1,22 @@
+<div class="container mt-5">
+  
+  <h2 class="text-center mb-4" data-aos="fade-down">Nos Missions</h2>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let mission of missions" data-aos="fade-up">
+      <div class="card mission-card">
+        <div class="card-body">
+          <h5 class="card-title">
+            <i class="bi bi-briefcase me-2"></i>{{ mission.title }}
+          </h5>
+          <p class="card-text">{{ mission.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-4">
+    <button class="btn btn-primary" data-aos="zoom-in" routerLink="/missions">
+      <i class="bi bi-search me-2"></i> Clicker ici pour voir toutes les missions
+    </button>
+    
+  </div>
+</div>

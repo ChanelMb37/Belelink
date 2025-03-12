@@ -1,0 +1,60 @@
+.contact-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  background: #ffffff;
+  padding: 15px; /* 📌 Réduction du padding */
+  max-width: 80%; /* 📌 Réduit la largeur */
+  margin: auto; /* 📌 Centre les cartes */
+}
+
+.contact-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+/* 📌 Icônes des réseaux sociaux */
+.contact-card a {
+  color: #007bff;
+  transition: transform 0.3s ease, color 0.3s ease;
+  font-size: 1.2rem; /* 📌 Légèrement réduit */
+}
+
+.contact-card a:hover {
+  color: #0056b3;
+  transform: scale(1.15);
+}
+
+/* 📌 Styliser le titre */
+.card-title {
+  font-size: 1.3rem; /* 📌 Taille du titre légèrement réduite */
+  font-weight: bold;
+}
+
+/* 📌 Amélioration du texte */
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* 📌 Google Map réduit */
+iframe {
+  border-radius: 10px;
+  width: 90%; /* 📌 Réduction de la largeur */
+  height: 300px; /* 📌 Réduction de la hauteur */
+  display: block;
+  margin: auto;
+}
+
+/* 📌 Responsive design */
+@media (max-width: 768px) {
+  .contact-card {
+      max-width: 95%; /* 📌 Réduction encore plus sur mobile */
+      padding: 10px;
+  }
+
+  iframe {
+      width: 100%;
+      height: 250px; /* 📌 Encore plus réduit sur mobile */
+  }
+}

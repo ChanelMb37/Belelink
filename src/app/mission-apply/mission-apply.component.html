@@ -1,0 +1,19 @@
+<div class="apply-container">
+    <h2>Postuler à la mission</h2>
+    <form (ngSubmit)="apply()">
+      <div class="form-group">
+        <label for="name">Nom :</label>
+        <input id="name" type="text" [(ngModel)]="name" name="name" required class="input-field" placeholder="Votre nom">
+      </div>
+      <div class="form-group">
+        <label for="email">Email :</label>
+        <input id="email" type="email" [(ngModel)]="email" name="email" required class="input-field" placeholder="Votre email">
+      </div>
+      <div class="form-group">
+        <label for="phone">Téléphone :</label>
+        <input id="phone" type="tel" [(ngModel)]="phone" name="phone" required class="input-field" placeholder="Votre téléphone">
+      </div>
+      <button type="submit" class="btn btn-primary">Envoyer ma candidature</button>
+    </form>
+  </div>
+  

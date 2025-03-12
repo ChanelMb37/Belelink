@@ -1,0 +1,19 @@
+<div class="register-container">
+  <h2>Inscription</h2>
+  
+  <!-- Champ Email -->
+  <input type="email" [(ngModel)]="email" placeholder="Email" class="input-field">
+
+  <!-- Champ Mot de passe avec icône de visibilité -->
+  <div class="password-container">
+    <input [type]="showPassword ? 'text' : 'password'" [(ngModel)]="password" placeholder="Mot de passe" class="input-field">
+    <i class="bi" [ngClass]="showPassword ? 'bi-eye-slash' : 'bi-eye'" (click)="togglePasswordVisibility()"></i>
+  </div>
+
+  <!-- Bouton S'inscrire -->
+  <button (click)="register()" class="btn btn-primary">S'inscrire</button>
+
+  <!-- Lien vers la connexion -->
+  <p>Déjà un compte ? <a routerLink="/login">Se connecter</a></p>
+  <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+</div>

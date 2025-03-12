@@ -1,0 +1,23 @@
+.mission-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.btn-primary{
+  
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+.text-center{
+  /* height: 100px; */
+  margin: 100px;
+}

@@ -1,0 +1,59 @@
+/* 🌟 Style général du footer */
+.footer {
+  background-color: white; /* 💙 Bleu principal pour harmonisation avec la navbar */
+  color: Bleu; /* 🏆 Texte blanc pour un bon contraste */
+  padding: 25px 0; /* 📏 Espacement interne pour aérer le contenu */
+  border-top: 3px solid #0056b3; /* 🖌️ Légère séparation avec le reste du site */
+  font-size: 0.95rem; /* 🔤 Taille de police légèrement ajustée */
+}
+
+/* 📌 Centrage du contenu */
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🔗 Style des liens */
+.footer-link {
+  color: ; /* 🤍 Texte blanc pour contraste */
+  text-decoration: none; /* ❌ Suppression du soulignement */
+  font-weight: 500; /* 🔠 Texte légèrement épais */
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding: 8px 12px; /* 📏 Meilleure accessibilité pour le clic */
+}
+
+/* 🎨 Effet au survol */
+.footer-link:hover {
+  color: #ffdd57; /* 🌟 Jaune doré pour effet premium */
+  transform: scale(1.1); /* 🕹️ Léger zoom pour dynamisme */
+}
+
+/* 📌 Style de la liste des liens */
+.footer .list-inline {
+  padding: 0;
+  margin-bottom: 10px; /* 📏 Réduction de l’espace en bas */
+}
+
+/* 🏆 Copyright */
+.footer p {
+  color: Bleu; /* 🤍 Blanc cassé pour lisibilité */
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+
+/* 📱 Responsive : Meilleure organisation sur mobile */
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+  .footer .list-inline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer-link {
+    display: block;
+    margin: 5px 10px; /* 📏 Espacement entre les liens */
+  }
+}

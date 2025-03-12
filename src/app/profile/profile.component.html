@@ -1,0 +1,20 @@
+<div class="profile-container">
+  <h2 class="profile-title">Mon Compte</h2>
+
+  <!-- Affichage de la photo de profil -->
+  <!-- <div class="profile-picture">
+    <img [src]="photoURL || 'default-photo.jpg'" alt="Photo de profil" class="profile-img">
+  </div> -->
+
+  <!-- Affichage de l'email de l'utilisateur -->
+  <p><strong>Email :</strong> {{ user?.email }}</p>
+
+  <!-- Formulaire pour modifier le nom -->
+  <div class="form-group">
+    <label for="displayName">Nom :</label>
+    <input id="displayName" type="text" [(ngModel)]="displayName" class="input-field" placeholder="Entrez votre nom">
+  </div>
+
+  <!-- Bouton pour mettre à jour les informations -->
+  <button (click)="updateProfile()" class="btn btn-primary update-btn">Mettre à jour</button>
+</div>

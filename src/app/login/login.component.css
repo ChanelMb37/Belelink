@@ -1,0 +1,61 @@
+/* Conteneur principal */
+.login-container {
+  max-width: 400px;
+  margin: 100px auto; /* Marge supérieure pour espacer du header et centrage */
+  padding: 40px; /* Diminution du padding intérieur */
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-top: 100px; /* Espacement supplémentaire avec le header */
+  margin-bottom: 50px; /* Espacement avec le footer */
+}
+
+/* Champs de saisie */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Bouton principal */
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Bouton Google */
+.btn-google {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.btn-google:hover {
+  background-color: #f1f1f1;
+}
+
+/* Logo Google */
+.google-logo {
+  width: 20px;
+  margin-right: 10px;
+}
+
