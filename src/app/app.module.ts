@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +25,7 @@ import { environment } from 'src/environments/environment';
 import {  MissionsComponent } from './missions/missions.component';
 import { MissionListComponent } from './mission-list/mission-list.component';
 import { MissionApplyComponent } from './mission-apply/mission-apply.component';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CommonModule } from '@angular/common';
 import { MissionDetailComponent } from './mission-detail/mission-detail.component';
@@ -32,8 +33,10 @@ import { CreateMissionComponent } from './create-mission/create-mission.componen
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
     AppComponent,
     HomeComponent,
@@ -54,6 +57,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    RouterModule, 
     AppRoutingModule,  // Importation du module de routage
     FormsModule,  // Pour utiliser ngModel
     ReactiveFormsModule,  // Pour utiliser les formulaires réactifs si nécessaire

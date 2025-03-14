@@ -2,7 +2,10 @@
   <h2 class="mission-title">{{ mission.title }}</h2>
   <p class="mission-description">{{ mission.description }}</p>
   <p class="mission-date"><strong>Date:</strong> {{ mission.date | date:'mediumDate' }}</p>
+  <p class="mission-time"><strong>Heure:</strong> {{ mission.time }}</p>
+
   <p class="mission-location" *ngIf="mission.location"><strong>Lieu:</strong> {{ mission.location }}</p>
+  <p class="mission-organizer" *ngIf="mission.organizer"><strong>Organisateur:</strong> {{ mission.organizer }}</p> <!-- Ajout de l'organisateur -->
 
   <!-- Boutons pour l'administrateur -->
   <div *ngIf="isAdmin">

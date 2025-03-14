@@ -1,5 +1,5 @@
 // 📌 Importation des modules nécessaires
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MissionService } from '../../services/mission.service';
 import { AuthService } from '../../services/auth.service';
@@ -23,7 +23,7 @@ export class MissionApplyComponent implements OnInit {
     private route: ActivatedRoute, // 📌 Permet de récupérer l'ID de la mission dans l'URL
     private missionService: MissionService, // 📌 Service pour gérer les missions
     private authService: AuthService, // 📌 Service d'authentification
-    private messagingService: MessagingService, // 📌 Service pour envoyer des notifications via FCM
+    @Inject(MessagingService) private messagingService: MessagingService, // 📌 Service pour envoyer des notifications via FCM
     private router: Router // 📌 Service pour gérer la navigation
   ) {}
 

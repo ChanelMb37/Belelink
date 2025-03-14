@@ -1,68 +1,58 @@
+/* Conteneur principal */
 .mission-list-container {
   padding: 20px;
-  height: 500px;
+  min-height: 100vh; /* Permet au conteneur de s'étendre selon le contenu */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.title {
-  text-align: center;
+/* Conteneur de recherche */
+.search-container {
+  max-width: 300px;
   margin-bottom: 20px;
 }
 
-/* Conteneur centré pour la barre de recherche avec largeur réduite */
-.search-container {
-  max-width: 400px;
-  margin: 0 auto 20px auto;
-}
-
-/* Styles pour l'input group de recherche */
 .input-group {
   width: 100%;
+  display: flex;
 }
 
-/* Réduction de la taille des éléments de recherche */
 .search-select {
   max-width: 120px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .search-input {
+  flex: 1;
   max-width: 180px;
 }
 
 .search-btn {
   max-width: 50px;
-}
-
-/* Optionnel : Ajout d'un peu d'espacement interne et de bordures arrondies */
-.search-select,
-.search-input,
-.search-btn {
-  border-radius: 0;
-}
-
-.search-select {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-
-.search-btn {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
-/* Affichage des cartes de mission */
+/* Conteneur des cartes */
 .mission-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start; /* Alignement au début de la ligne */
+  gap: 20px; /* Espacement entre les cartes */
+  width: 100%;
+  max-width: 1200px;
 }
 
+/* Style de chaque carte */
 .mission-card {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 10px;
   padding: 20px;
-  width: 300px;
+  width: 30%; /* Ajustement pour une meilleure disposition */
+  min-width: 280px; /* Évite que les cartes deviennent trop petites */
   transition: transform 0.3s ease;
 }
 
@@ -70,7 +60,21 @@
   transform: translateY(-5px);
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 10px;
+/* Forcer l'alignement correct de la 4ème mission */
+.mission-card:nth-child(4n + 1) {
+  margin-left: 0;
+}
+
+/* Responsive pour tablettes */
+@media (max-width: 1024px) {
+  .mission-card {
+    width: 45%; /* Deux cartes par ligne */
+  }
+}
+
+/* Responsive pour mobiles */
+@media (max-width: 600px) {
+  .mission-card {
+    width: 90%; /* Une seule carte par ligne */
+  }
 }

@@ -15,6 +15,8 @@ export interface Mission {
   title: string;        // 📌 Titre de la mission
   description: string;  // 📌 Description détaillée
   date: Date;          // 📌 Date prévue pour la mission
+  time: string;  // ⏰ Ajout du champ heure
+  organizer: string;
   location?: string;    // 📌 Lieu de la mission (optionnel)
   organiserId: string;  // 📌 ID de l'organisateur
   applicationsCount?: number; // 📌 Nombre de candidatures (optionnel)

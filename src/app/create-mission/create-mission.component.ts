@@ -29,8 +29,11 @@ export class CreateMissionComponent implements OnInit {
       title: ['', Validators.required],
       description: ['', Validators.required],
       date: ['', Validators.required],
-      location: [''] // 🔄 Champ facultatif
+      time: ['', Validators.required],  // ⏰ Ajout du champ heure
+      location: [''],
+      organizer: ['', Validators.required] // 🏢 Ajout du champ organisateur
     });
+   
   }
 
   ngOnInit(): void {
@@ -57,10 +60,13 @@ export class CreateMissionComponent implements OnInit {
             title: mission.title,
             description: mission.description,
             date: mission.date,
-            location: mission.location
+            time: mission.time, // ⏰ Ajout du champ heure
+            location: mission.location,
+            organizer: mission.organizer // 🏢 Ajout du champ organisateur
           });
         }
       });
+      
     }
   }
 

@@ -29,11 +29,13 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    
     // 🚀 Initialise les animations AOS avec une durée de 1000ms
     AOS.init({ duration: 1000 });
 
     // 🔍 Vérification de l'état de l'utilisateur (abonnement aux changements d'authentification)
-    this.authService.user$.subscribe(user => {
+    this.authService.user$.subscribe((user: any) => {
+
       this.loading = false; // ✅ Désactive le mode chargement après récupération des infos utilisateur
 
       if (user) {

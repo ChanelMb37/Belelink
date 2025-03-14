@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-missions',
   templateUrl: './missions.component.html',
   styleUrls: ['./missions.component.css']
 })
-export class MissionsComponent {
+export class MissionsComponent implements OnInit {
+
   missions = [
     {
       title: 'Éducation pour tous',
@@ -24,4 +25,8 @@ export class MissionsComponent {
       description: 'Aidez-nous à distribuer des repas aux personnes dans le besoin. Ensemble, nous pouvons combattre la faim dans nos communautés.'
     }
   ];
+
+  ngOnInit(): void {
+    console.log('MissionsComponent initialisé avec', this.missions);
+  }
 }

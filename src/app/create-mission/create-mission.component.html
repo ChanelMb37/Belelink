@@ -20,10 +20,23 @@
               <label for="date" class="form-label">Date</label>
               <input type="date" id="date" formControlName="date" class="form-control">
             </div>
+
+            <div class="mb-3">
+              <label for="time" class="form-label">Heure</label>
+              <input type="time" id="time" formControlName="time" class="form-control">
+            </div>
+            
+           
+            
             <div class="mb-3">
               <label for="location" class="form-label">Lieu</label>
               <input id="location" formControlName="location" class="form-control" placeholder="Lieu">
             </div>
+            <div class="mb-3">
+              <label for="organizer" class="form-label">Organisateur</label>
+              <input id="organizer" formControlName="organizer" class="form-control" placeholder="Nom de l'ONG ou de la personne">
+            </div>
+
             <div class="text-center">
               <button type="submit" class="btn btn-primary w-100">
                 {{ isEditMode ? 'Appliquer la modification' : 'Créer la mission' }}

@@ -32,7 +32,7 @@ export class RegisterComponent {
     // 🔹 Appel du service d'inscription
     this.authService.register(this.email, this.password)
       .then(() => {
-        this.router.navigate(['/']); // 🚀 Redirection vers l'accueil après l'inscription réussie
+        this.router.navigate(['/login']); // 🚀 Redirection vers l'accueil après l'inscription réussie
       })
       .catch(error => {
         this.handleError(error); // 📌 Gestion des erreurs Firebase

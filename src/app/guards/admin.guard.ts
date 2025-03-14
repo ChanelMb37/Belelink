@@ -16,7 +16,7 @@ export class AdminGuard implements CanActivate {
    * 📌 Vérifie si l'utilisateur est administrateur avant d'accéder à une route protégée.
    * @returns {Observable<boolean>} Renvoie `true` si l'utilisateur est admin, sinon redirige vers l'accueil.
    */
-  canActivate(): Observable<boolean> {
+  canActivate(p0: unknown): Observable<boolean> {
     return this.authService.user$.pipe(
       map(user => {
         if (user && user.role === 'admin') { // ✅ Vérifie si l'utilisateur est connecté et a le rôle "admin"

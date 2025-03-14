@@ -20,7 +20,7 @@ export class AuthGuard implements CanActivate {
    * Si l'utilisateur est connecté, il peut accéder à la page.
    * Sinon, il est redirigé vers la page de connexion.
    */
-  canActivate(): Observable<boolean> {
+  canActivate(p0: unknown): Observable<boolean> {
     return this.authService.user$.pipe(
       map(user => {
         if (user) {

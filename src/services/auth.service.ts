@@ -50,14 +50,24 @@ export class AuthService {
       const userCredential = await this.afAuth.createUserWithEmailAndPassword(email, password);
       const user = userCredential.user;
       if (user) {
-        await this.addUserToFirestore(user, 'user'); // 🔄 Enregistre l'utilisateur en base
-        this.router.navigate(['/dashboard']); // 🚀 Redirection après inscription
+        // Envoyer un email de vérification
+        await user.sendEmailVerification();
+  
+        // Ajouter l'utilisateur à Firestore
+        await this.addUserToFirestore(user, 'user');
+  
+        // Déconnexion immédiate pour forcer l'utilisateur à confirmer son email
+        await this.afAuth.signOut();
+  
+        // Redirection vers la page de connexion avec un message
+        this.router.navigate(['/login'], { queryParams: { verifyEmail: true } });
       }
     } catch (error) {
       console.error('❌ Erreur lors de l’inscription:', error);
       throw error;
     }
   }
+  
 
   /**
    * 🔑 Connexion avec email et mot de passe.

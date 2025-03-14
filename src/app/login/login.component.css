@@ -59,3 +59,19 @@
   margin-right: 10px;
 }
 
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-container .input-field {
+  flex: 1;
+  padding-right: 30px; /* Pour éviter que l'icône recouvre le texte */
+}
+
+.password-container i {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
