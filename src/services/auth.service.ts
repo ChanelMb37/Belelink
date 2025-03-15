@@ -87,20 +87,37 @@ export class AuthService {
   /**
    * 🔑 Connexion avec un compte Google.
    */
-  async loginWithGoogle(): Promise<void> {
-    try {
-      const provider = new firebase.auth.GoogleAuthProvider();
-      const userCredential = await this.afAuth.signInWithPopup(provider);
-      const user = userCredential.user;
-      if (user) {
-        await this.addUserToFirestore(user, 'user', true); // 🔄 Sauvegarde dans Firestore
-        this.router.navigate(['/dashboard']); // 🚀 Redirection après connexion Google
-      }
-    } catch (error) {
-      console.error('❌ Erreur lors de la connexion Google:', error);
-      throw error;
+  /**
+ * 🔑 Connexion avec un compte Google.
+ * Cette méthode permet à un utilisateur de se connecter via Google en utilisant Firebase Authentication.
+ */
+async loginWithGoogle(): Promise<void> {
+  try {
+    // 1️⃣ Création d'un fournisseur d'authentification Google
+    const provider = new firebase.auth.GoogleAuthProvider();
+
+    // 2️⃣ Affiche une fenêtre pop-up pour que l'utilisateur sélectionne son compte Google
+    const userCredential = await this.afAuth.signInWithPopup(provider);
+
+    // 3️⃣ Récupération des informations de l'utilisateur connecté
+    const user = userCredential.user;
+
+    if (user) {
+      // 4️⃣ Ajout ou mise à jour des informations de l'utilisateur dans Firestore
+      //    - user : l'utilisateur Firebase
+      //    - 'user' : rôle par défaut (peut être modifié plus tard)
+      //    - true : indique que c'est une connexion via Google
+      await this.addUserToFirestore(user, 'user', true); 
+
+      // 5️⃣ Redirection vers le tableau de bord après connexion réussie
+      this.router.navigate(['/dashboard']); 
     }
+  } catch (error) {
+    // 6️⃣ Gestion des erreurs en cas de problème lors de la connexion
+    console.error('❌ Erreur lors de la connexion Google:', error);
+    throw error; // Relance l'erreur pour permettre son traitement ailleurs si nécessaire
   }
+}
 
   /**
    * 🚪 Déconnexion de l'utilisateur.
